@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KainTa' - Jual Pakaian</title>
+    <link rel="stylesheet" href="css/sell-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">KainTa<span>'</span></div>
+            <ul class="side-links">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="active"><a href="#"><i class="fa-solid fa-tags"></i> Jual Barang</a></li>
+                <li><a href="#"><i class="fa-solid fa-hand-holding-heart"></i> Donasi</a></li>
+                <li><a href="#"><i class="fa-solid fa-recycle"></i> Daur Ulang</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h2>Buka Penjualan Baru</h2>
+                <p>Ubah pakaian layak pakaimu menjadi penghasilan.</p>
+            </header>
+
+            <form class="sell-form">
+                <div class="form-grid">
+                    
+                    <div class="form-left">
+                        <div class="section-box">
+                            <label class="label-title">Foto Produk</label>
+                            <div class="photo-upload-grid">
+                                <div class="upload-slot main">
+                                    <i class="fa-solid fa-camera"></i>
+                                    <span>Foto Utama</span>
+                                </div>
+                                <div class="upload-slot"> <i class="fa-solid fa-plus"></i> </div>
+                                <div class="upload-slot"> <i class="fa-solid fa-plus"></i> </div>
+                            </div>
+                        </div>
+
+                        <div class="section-box">
+                            <label class="label-title">Detail Pakaian</label>
+                            <input type="text" placeholder="Nama Barang (Contoh: Jaket Denim Vintage)" class="input-field">
+                            <select class="input-field">
+                                <option value="">Pilih Kategori</option>
+                                <option value="atasan">Atasan</option>
+                                <option value="bawahan">Bawahan</option>
+                                <option value="outer">Outerwear</option>
+                            </select>
+                            <textarea placeholder="Deskripsi Barang (Bahan, Ukuran, Minus jika ada)" class="input-field"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-right">
+                        <div class="section-box highlight-box">
+                            <label class="label-title">Penetapan Harga</label>
+                            <div class="price-input-wrapper">
+                                <span>Rp</span>
+                                <input type="number" placeholder="0" id="input-price">
+                            </div>
+                            
+                            <div class="price-recommendation">
+                                <div class="rec-header">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                    <span>Rekomendasi Harga</span>
+                                </div>
+                                <div class="rec-content">
+                                    <p>Berdasarkan kondisi & merk serupa:</p>
+                                    <div class="price-range">Rp 45.000 - Rp 75.000</div>
+                                    <small>*Harga ini disarankan agar barang cepat laku.</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-box">
+                            <label class="label-title">Kondisi Barang</label>
+                            <div class="condition-options">
+                                <label class="radio-tag">
+                                    <input type="radio" name="condition" value="new">
+                                    <span>Baru</span>
+                                </label>
+                                <label class="radio-tag">
+                                    <input type="radio" name="condition" value="excellent" checked>
+                                    <span>Sangat Baik</span>
+                                </label>
+                                <label class="radio-tag">
+                                    <input type="radio" name="condition" value="good">
+                                    <span>Layak Pakai</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="publish-btn">Mulai Jual Sekarang</button>
+                    </div>
+
+                </div>
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>
+

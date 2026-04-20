@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE-HOME - Join Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="login-card">
+            
+            <div class="left-panel">
+                <div class="left-content">
+                    <h1>JOIN US</h1>
+                    <p>Siap memberikan kesempatan kedua bagi tekstilmu? Daftar hari ini untuk mulai re-love, re-use, dan re-homing bersama komunitas kami.</p>
+                    <div class="illustration-box">
+                        <img src="assets/pic2trylogin.png" alt="RE-HOME Illustration">
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="right-content">
+                    <div class="form-header">
+                        <h2>CREATE ACCOUNT</h2>
+                    </div>
+
+                    <form action="#" method="POST">
+                        <div class="input-group">
+                            <i class="fa-regular fa-address-card input-icon"></i>
+                            <input type="text" placeholder="Profile Name" required>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fa-regular fa-envelope input-icon"></i>
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fa-solid fa-phone input-icon"></i>
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="reg-password" placeholder="Password" required>
+                            <i class="fa-regular fa-eye toggle-password" onclick="togglePass('reg-password', this)"></i>
+                        </div>
+
+                        <button type="submit" class="login-btn">SIGN IN</button>
+                    </form>
+
+                    <div class="divider-text">Or Use</div>
+
+                    <div class="social-login">
+                        <button class="google-btn">
+                            <img src="assets/google.png" alt="Google">
+                            Sign in with Google
+                        </button>
+                    </div>
+
+                    <div class="create-account">
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function togglePass(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.replace("fa-eye-slash", "fa-eye");
+            }
+        }
+    </script>
+</body>
+</html>
+
+

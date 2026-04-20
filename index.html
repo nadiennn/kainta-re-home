@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KainTa' - Solusi Tekstil Berkelanjutan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/landing-style.css">
+    <style>
+        /* CSS TAMBAHAN UNTUK HERO PARALLAX */
+        .hero-section {
+            position: relative;
+            /* Menggunakan background-image agar gambar di belakang teks */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/image1.jpg');
+            background-attachment: fixed; /* INI KUNCI EFEK BERGERAK SAAT SCROLL (PARALLAX) */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80vh; /* Tinggi hero section */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 0 50px 50px; /* Opsional: lekukan di bawah hero */
+            overflow: hidden;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.274); /* Efek kartu putih transparan */
+            backdrop-filter: blur(10px); /* Efek blur kaca */
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Hilangkan pembungkus lama agar tidak konflik */
+        .hero-wrapper {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="container top-bar-flex">
+                <div class="user-toggle">
+                    <a href="#" class="active">INDIVIDU</a> | <a href="#">MITRA BISNIS</a>
+                </div>
+                <div class="top-info">
+                    <a href="track.html"><i class="fa-solid fa-truck-fast"></i> Lacak Penjemputan</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container nav-flex">
+                <div class="logo">KainTa<span>'</span></div>
+                
+                <div class="nav-right-side">
+                    <ul class="nav-links">
+                        <li class="dropdown">
+                            <a href="#">LAYANAN <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="dropdown-content">
+                                <li><a href="shop.html">Commercial</a></li>
+                                <li><a href="donation.html">Donation</a></li>
+                                <li><a href="recycle-info.html">Recycle</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="sell-item.html">JADI MITRA</a></li> 
+                        <li><a href="#">TENTANG</a></li>
+                        <li><a href="#">BANTUAN</a></li>
+                    </ul>
+                    <div class="nav-icons">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="html/login.html" class="user-link"><i class="fa-regular fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-card">
+                    <h1>GIVE YOUR CLOTHES <br><span>A SECOND LIFE</span></h1>
+                    <p>Cara termudah untuk menjual, mendonasikan, atau mendaur ulang tekstil Anda secara bertanggung jawab.</p>
+                    <a href="login.html" class="btn-primary">Mulai Sekarang</a> 
+                </div>
+            </div>
+        </section>
+
+        <section class="dual-path-section container">
+            <div class="path-card">
+                <div class="path-icon"><i class="fa-solid fa-house-user"></i></div>
+                <h3>Untuk Individu</h3>
+                <p>Beli barang second-hand sesuai selera anda</p>
+            </div>
+            <div class="path-card">
+                <div class="path-icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3>Untuk Distributor</h3>
+                <p>Kelola pakaian tak terpakai dari rumah. Kami jemput dan berikan kesempatan kedua bagi kainmu.</p>
+            </div>
+        </section>
+
+        <section class="services-section container">
+            <h2 class="section-title">LAYANAN KAMI</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="img-zoom">
+                        <img src="assets/3dimageshop.jpg" alt="Commercial">
+                    </div>
+                    <div class="service-info">
+                        <h3>COMMERCIAL</h3>
+                        <p>Belanja koleksi second-hand pilihan.</p>
+                        <a href="shop.html" class="btn-text">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="img-zoom">
+                        <img src="assets/3d donation.png" alt="Donation">
+                    </div>
+                    <div class="service-info">
+                        <h3>DONATION</h3>
+                        <p>Salurkan pakaian layak pakai Anda.</p>
+                        <a href="donation-stories.html" class="btn-text">DONASI SEKARANG</a> 
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="img-zoom">
+                        <img src="assets/3d recycle image.jpg" alt="Recycle">
+                    </div>
+                    <div class="service-info">
+                        <h3>RECYCLE</h3>
+                        <p>Daur ulang limbah tekstil industri.</p>
+                        <a href="recycle-info.html" class="btn-text">VIEW MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-cta container">
+            <div class="cta-banner-box">
+                <h2>Ingin menyalurkan stok tekstil berlebih?</h2>
+                <p>Daftar sebagai mitra distributor atau pabrik hari ini untuk solusi berkelanjutan.</p>
+                <a href="pickup-form.html" class="btn-white">Daftar Sebagai Mitra</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>RE-HOME DEVELOPER</h3>
+                <p class="limited-text">Inisiatif pengelolaan tekstil berbasis di Makassar yang berdedikasi menciptakan ekosistem konsumsi yang lebih bertanggung jawab melalui kurasi pasar dan donasi.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+

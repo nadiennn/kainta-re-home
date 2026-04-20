@@ -1,0 +1,164 @@
+:root {
+    --sage-green: #97AB85;
+    --deep-sage: #7D8F6A;
+    --light-bg: #F9F9F9;
+    --text-color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--light-bg);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 24px; font-weight: bold; color: var(--sage-green); }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: #666; font-size: 14px; }
+
+/* Form Layout */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pickup-form {
+    width: 100%;
+    max-width: 450px; /* Lebar ala layar HP sesuai wireframe */
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.form-section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+/* Map Placeholder */
+.map-placeholder {
+    width: 100%;
+    height: 150px;
+    background: #eef2ed;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-overlay { text-align: center; color: var(--deep-sage); }
+.map-overlay i { font-size: 30px; display: block; margin-bottom: 5px; }
+
+/* Category Selector */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.category-card input { display: none; }
+
+.card-content {
+    border: 2px solid #eee;
+    padding: 15px 5px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-content i { font-size: 24px; color: #999; margin-bottom: 8px; display: block; }
+.card-content span { font-size: 11px; font-weight: bold; color: #777; }
+
+/* Logic saat Radio di-klik */
+.category-card input:checked + .card-content {
+    border-color: var(--sage-green);
+    background-color: #f1f6ef;
+}
+.category-card input:checked + .card-content i,
+.category-card input:checked + .card-content span {
+    color: var(--sage-green);
+}
+
+/* Date & Time */
+.datetime-container {
+    display: flex;
+    gap: 15px;
+}
+
+.date-picker, .time-picker { flex: 1; }
+
+.sub-label {
+    display: block;
+    font-size: 11px;
+    background: #eee;
+    padding: 4px 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Upload Box */
+.upload-box {
+    border: 2px dashed var(--sage-green);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    background: #fdfdfd;
+}
+
+.upload-box i { font-size: 40px; color: var(--sage-green); margin-bottom: 10px; }
+.upload-box p { font-weight: bold; margin: 0; font-size: 14px; }
+.upload-box span { font-size: 11px; color: #888; }
+
+/* Submit Button */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--sage-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: var(--deep-sage);
+}
+

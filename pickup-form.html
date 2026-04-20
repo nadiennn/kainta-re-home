@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KainTa' - Jadwalkan Penjemputan</title>
+    <link rel="stylesheet" href="css/form-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">KainTa<span>'</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="track.html">Status</a></li>
+                <li><a href="#">History</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fa-solid fa-user-circle"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="form-wrapper">
+        <form class="pickup-form">
+            
+            <section class="form-section">
+                <label class="section-title">MASUKKAN ALAMAT <i class="fa-solid fa-location-dot"></i></label>
+                <div class="map-placeholder">
+                    <div class="map-overlay">
+                        <i class="fa-solid fa-location-pin"></i>
+                        <span>Pilih lokasi di peta</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <label class="section-title">PILIH KATEGORI BARANG</label>
+                <div class="category-grid">
+                    <label class="category-card">
+                        <input type="radio" name="category" value="pakaian" checked>
+                        <div class="card-content">
+                            <i class="fa-solid fa-shirt"></i>
+                            <span>PAKAIAN</span>
+                        </div>
+                    </label>
+                    <label class="category-card">
+                        <input type="radio" name="category" value="tekstil">
+                        <div class="card-content">
+                            <i class="fa-solid fa-rug"></i>
+                            <span>TEKSTIL</span>
+                        </div>
+                    </label>
+                    <label class="category-card">
+                        <input type="radio" name="category" value="lainnya">
+                        <div class="card-content">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <span>LAINNYA</span>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <label class="section-title">WAKTU PENJEMPUTAN</label>
+                <div class="datetime-container">
+                    <div class="date-picker">
+                        <span class="sub-label">TANGGAL</span>
+                        <input type="date" required>
+                    </div>
+                    <div class="time-picker">
+                        <span class="sub-label">JAM</span>
+                        <input type="time" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <label class="section-title">UPLOAD FOTO</label>
+                <div class="upload-box" onclick="document.getElementById('file-input').click()">
+                    <i class="fa-solid fa-camera"></i>
+                    <p>MASUKKAN GAMBAR</p>
+                    <span>(Foto langsung atau ambil file)</span>
+                    <input type="file" id="file-input" hidden accept="image/*">
+                </div>
+            </section>
+
+            <button type="button" class="login-btn" onclick="window.location.href='track.html'">SUBMIT ORDER</button>
+
+        </form>
+    </main>
+
+</body>
+</html>
+

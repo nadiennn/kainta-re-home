@@ -1,0 +1,108 @@
+:root {
+    --sage-green: #97AB85;
+    --deep-sage: #7D8F6A;
+    --light-cream: #FDFBF7;
+    --white: #FFFFFF;
+    --border-color: #E6E9E4;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+body { background-color: #F8F9F7; }
+
+.dashboard-container { display: flex; min-height: 100vh; }
+
+/* Reuse Sidebar Styles dari sebelumnya */
+.sidebar { width: 250px; background: var(--white); border-right: 1px solid var(--border-color); padding: 30px 20px; }
+.sidebar-logo { font-size: 26px; font-weight: bold; color: var(--sage-green); margin-bottom: 40px; }
+.side-links { list-style: none; }
+.side-links a { text-decoration: none; color: #888; display: flex; padding: 12px; border-radius: 8px; margin-bottom: 5px; }
+.side-links li.active a { background: #F1F6EF; color: var(--sage-green); font-weight: bold; }
+
+/* Main Layout */
+.main-content { flex: 1; padding: 40px; }
+.content-header { margin-bottom: 30px; }
+.content-header h2 { color: #333; margin-bottom: 5px; }
+.content-header p { color: #888; font-size: 14px; }
+
+.form-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; }
+
+.section-box {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.label-title { display: block; font-weight: bold; font-size: 13px; text-transform: uppercase; color: #555; margin-bottom: 15px; }
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #FAFAFA;
+}
+
+/* Photo Grid */
+.photo-upload-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; height: 180px; }
+.upload-slot {
+    border: 2px dashed #CCC;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #AAA;
+    cursor: pointer;
+}
+.upload-slot.main { background: #F9F9F9; color: var(--sage-green); border-color: var(--sage-green); }
+
+/* Price Styling */
+.price-input-wrapper { display: flex; align-items: center; background: #F1F6EF; border-radius: 10px; padding: 5px 15px; }
+.price-input-wrapper span { font-weight: bold; color: var(--deep-sage); margin-right: 10px; }
+.price-input-wrapper input { background: transparent; border: none; padding: 10px; font-size: 20px; font-weight: bold; color: var(--deep-sage); width: 100%; outline: none; }
+
+/* Recommendation Box (Feature Baru) */
+.price-recommendation {
+    margin-top: 20px;
+    background: var(--light-cream);
+    border: 1px solid #E9E1D0;
+    border-radius: 8px;
+    padding: 15px;
+}
+.rec-header { color: #8B7E66; font-size: 13px; font-weight: bold; margin-bottom: 10px; display: flex; gap: 8px; align-items: center; }
+.price-range { font-size: 18px; color: #333; font-weight: bold; margin: 5px 0; }
+.price-recommendation small { color: #998B75; font-style: italic; }
+
+/* Condition Radio Tags */
+.condition-options { display: flex; gap: 10px; }
+.radio-tag input { display: none; }
+.radio-tag span {
+    padding: 8px 15px;
+    border: 1px solid #DDD;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s;
+}
+.radio-tag input:checked + span { background: var(--sage-green); color: white; border-color: var(--sage-green); }
+
+.publish-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--sage-green);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(151, 171, 133, 0.3);
+}
+
+.publish-btn:hover { background: var(--deep-sage); }
+
